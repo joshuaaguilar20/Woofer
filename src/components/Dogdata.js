@@ -28,7 +28,7 @@ export default class Dogdata extends React.Component {
                     address: data.petfinder.pets.pet[1].contact.address1,
                     email: data.petfinder.pets.pet[1].contact.email,
                     phone: data.petfinder.pets.pet[1].contact.phone,
-                    description: data.petfinder.pets.pet[1].description,
+                    description: data.petfinder.pets.pet.description,
                     media: data.petfinder.pets.pet[1].media.photos.photo[2].value,
                     loading: false
                 });
@@ -39,7 +39,7 @@ export default class Dogdata extends React.Component {
         return( 
             <div>
                 <h1>{this.state.name}</h1>
-                <img className = 'dogImage' src={this.state.media}></img>
+                <img className = 'dogImage' alt="Adopt this dog!" src={this.state.media}></img>
                 <p>
                     {this.state.description}
                     <br />
@@ -58,4 +58,6 @@ Dogdata.propTypes = {
     
 };
 
+//
+//
 // export default Dogdata 
