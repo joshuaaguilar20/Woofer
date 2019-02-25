@@ -58,6 +58,4 @@ Dogdata.propTypes = {
     
 };
 
-//
-//
 // export default Dogdata 
