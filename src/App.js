@@ -2,15 +2,12 @@ import React, { Component } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import Cardog from './components/Cardog';
-import { Provider } from 'react-redux';
-import { createStore , applyMiddleware } from 'redux';
 
-const store = createStore(() => [],{},applyMiddleware())
+
+
 class App extends Component {
   render() {
     return (
-      <Provider store ={store}>
-      
       <div className="App">
         <Navbar />
         <header className="App-header">
@@ -19,7 +16,6 @@ class App extends Component {
           <Cardog />
         </div>
       </div>
-      </Provider>
     );
   }
 }
