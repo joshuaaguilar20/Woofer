@@ -1,9 +1,16 @@
 .dogphoto{
   width: 100%;
   margin: 0;
-  height: 20rem;
+  height: 23rem;
   border-radius: 10px;
 }
-.dogheader{
+.dogheader, .dogsubheader{
 text-align: left;
+margin: 0.5rem;
+}
+body{
+font-family: 'Montserrat', sans-serif;
+}
+.button{
+  padding-right: 10px;
 }

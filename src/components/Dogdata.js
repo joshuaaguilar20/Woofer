@@ -2,7 +2,7 @@ import React from 'react';
 import pf from 'petfinder-client'
 import '../index.css'
 import { Card, CardWrapper } from 'react-swipeable-cards';
-
+import Button from '@material-ui/core/Button';
 // import PropTypes from 'prop-types';
 // import { Divider } from '@material-ui/core';
 
@@ -41,7 +41,7 @@ class Dogdata extends React.Component {
 
     onSwipeRight(data) {
         console.log("I was swiped right.");
-      }
+    }
     
 
     renderCards() {
@@ -50,19 +50,18 @@ class Dogdata extends React.Component {
         return data.map((d) => {
             return (
                 <Card
-
                     key={d.id}
                     data={d}
                     onDoubleTap={this.onDoubleTap.bind(this)}
-                    onSwipeRight={this.onSwipeRight.bind(this)}
                 >
                     <div>
                         <h2 className='dogheader' >{d.name}, {d.age}</h2>
-                        {d.breeds.breed[0]}
+                        <h4 className='dogsubheader'>{d.breeds.breed[0]}</h4>
+                        <h4 className='dogsubheader'>{d.contact.city}, {d.contact.state}</h4>
                         <img className='dogphoto' src={d.media.photos.photo[2].value} alt='adopt this dog'></img>
-                        <p>{d.description}</p>
-
-
+                        <Button className= 'button' variant="contained" color="secondary" >Primary</Button>
+                        <span> &nbsp; &nbsp;</span>
+                        <Button className= 'button'  variant="contained" color="primary" >Primary</Button>
                     </div>
                 </Card>
             );
