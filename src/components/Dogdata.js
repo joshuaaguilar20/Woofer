@@ -79,10 +79,9 @@ class Dogdata extends React.Component {
 
 }
 
-
-Dogdata.propTypes = {
-
-};
+const mapStateToProps = state => {
+    return { dogs: state.dogs };
+  };
 
 export default Dogdata
 
